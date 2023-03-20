@@ -64,6 +64,7 @@ int main()
 	  case 1: 
 	    cout << "성적 1";
 	    break;
+	}
 	
 	return 0;
 }
