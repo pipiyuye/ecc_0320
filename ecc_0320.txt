@@ -3,9 +3,67 @@ using namespace std;
 
 int main()
 {
+	//후위증가연산자
 	int a, b=0;
-	b=a++;
+	b=a++; //대입 후 증가
 	cout << b << '\n';
-
+	
+	//형변환, 캐스팅 연산자
+	int inum;
+	double dnum = 160.5;
+	inum = (int)dnum;
+	
+	//4.2
+	int height, bottom;
+	double area;
+	cout << "삼각형 높이: ";
+	cin >> height;
+	cout << "삼각형 밑변: ";
+	cin >> bottom;
+	area = height*bottom/2;
+	
+	//4.3
+	int sum, grade; double average;
+	cout << "과목1 점수: ";
+	cin >> grade;
+	sum += grade;
+	int sum, grade; double average;
+	cout << "과목2 점수: ";
+	cin >> grade;
+	sum += grade;
+	average = sum/2;
+	cout << "점수합계는 " << sum << ", 평균은 " << average;
+	
+	//조건연산자
+	ans = (res==1) ? 'A':'B';
+	
+	//5.1
+	int num;
+	cout << "정수 입력: ";
+	cin >> num;
+	if (num%2==0)
+		cout << "정수는 짝수이다";
+	else
+		cout << "정수는 홀수이다";
+	//5.2
+	int a, b;
+	cout << "정수 2개 입력: ";
+	cin >> a >> b;
+	if (a>b)
+		cout << a << "가 더크다.";
+	elseif (a<b)
+		cout << b << "가 더크다.";
+	else
+		cout << "두 수는 같다.";
+	
+	//5.3
+	int grade;
+	cout << "성적 입력: ";
+	cin >> grade;
+	switch(grade){
+	  case 1: 
+	    cout << "성적 1";
+	    break;
+	
 	return 0;
 }
