@@ -51,7 +51,7 @@ int main()
 	cin >> a >> b;
 	if (a>b)
 		cout << a << "가 더크다.";
-	elseif (a<b)
+	else if (a<b)
 		cout << b << "가 더크다.";
 	else
 		cout << "두 수는 같다.";
