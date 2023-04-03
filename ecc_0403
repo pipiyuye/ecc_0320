@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+void add(int x1, int x2, int a);
+void add2(int* x1, int* x2, int a);
+void add3(int& x1, int& x2, int a);
+int main() {
+    int score1, score2, addScore;
+    cout << "두 과목 점수 입력: ";
+    cin >> score1 >> score2;
+    cout << "더할 점수 입력: ";
+    cin >> addScore;
+    add(score1, score2, addScore);
+    cout << "결과: 과목1-" << score1 << " 과목2-" << score2;
+    add2(&score1, &score2, addScore);
+    cout << "결과: 과목1-" << score1 << " 과목2-" << score2;
+    add3(score1, score2, addScore);
+    cout << "결과: 과목1-" << score1 << " 과목2-" << score2;
+    
+    return 0;
+}
+void add(int x1, int x2, int a)
+{
+    int* y1 = &x1;
+    *y1 = *y1 + a;
+    int* y2 = &x2;
+    *y2 = *y2 + a;
+}
+void add2(int* x1, int* x2, int a)
+{
+    *x1 = *x1 + a;
+    *x2 = *x2 + a;
+}
+void add3(int& x1, int& x2, int a)
+{
+    x1 += a;
+    x2 += a;
+}
